@@ -21,39 +21,39 @@ function generatePassword() {
   let passwordNumbers = "0123456789";
   let passwordLowercase = "abcdefghijklmnopqrstuvwxyz";
   let passwordUppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  let passwordCharacters = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~:";
-
-// confirm commands and if else commands go here
+  let passwordSpecial = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~:";
 
   let numbersTag = confirm("Would you like to include numbers in your password?");
   if (numbersTag === true) {
-// how do I validate this here?
+    passwordCharacters += passwordNumbers;
   };
 
   let lowercaseTag = confirm("Would you like to include lowercase letters in your password?");
   if (lowercaseTag === true) {
-
+    passwordCharacters += passwordLowercase;
   };
 
   let uppercaseTag = confirm("Would you like to include uppercase letters in your password?");
   if (uppercaseTag === true) {
-
+    passwordCharacters += passwordUppercase;
   };
 
-  let charactersTag = confirm("Would you like to include special characters in your password?");
-  if (charactersTag === true) {
-
+  let specialTag = confirm("Would you like to include special characters in your password?");
+  if (specialTag === true) {
+    passwordCharacters += passwordSpecial;
   };
 
-  if(numbersTag !== true && lowercaseTag !== true && uppercaseTag !== true && charactersTag !== true) {
-    alert("You must choose to include one of four options to create a valid password");
-  }
+  if(numbersTag !== true && lowercaseTag !== true && uppercaseTag !== true && specialTag !== true) {
+    alert("You must choose to include at least one criteria to create a valid password");
+    return
+  };
 
+  let password = "";
+  for (var i = 0; i < passwordLength; i++) {
+    password += passwordCharacters.charAt(Math.floor(Math.random() * passwordCharacters.length));
+  };
   
-  // for (var i = 0; i = passwordLength; i++) {
-  // };
-  
-  return 'newPassword';
+  return password;
 }
 
 // Write password to the #password input
