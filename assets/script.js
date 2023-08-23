@@ -1,4 +1,5 @@
 var generateBtn = document.querySelector("#generate");
+let passwordCharacters;
 
 function generatePassword() {
   let passwordCriteria = {
@@ -48,8 +49,6 @@ function generatePassword() {
     return
   };
 
-  // do I * by passwordLength or passwordCharacters.length here?
-  // should I use the variable password here or create a new one (newPassword)?
   let password = "";
   for (var i = 0; i < passwordLength; i++) {
     password += passwordCharacters.charAt(Math.floor(Math.random() * passwordLength));
