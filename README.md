@@ -20,10 +20,7 @@ Screenshot of deployed application may be found at:
 
 ## Credits
 
-I collaborated with:
+I used the following link to gather the approved special characters from the OWASP foundation: https://www.owasp.org/index.php/Password_special_characters
 
-I used the following tutorials:
 
-## License
 
-MIT license
