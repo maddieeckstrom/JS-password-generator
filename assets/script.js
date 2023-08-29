@@ -2,7 +2,7 @@ var generateBtn = document.querySelector("#generate");
 
 // declaring the function to generate the password
 function generatePassword() {
-  let passwordCharacters = '';
+  let passwordCharacters = "";
   
   // sets the max and min for the length of the password
   let passwordCriteria = {
